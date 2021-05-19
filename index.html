@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" id="style" href="style1.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+<!-- <script>
+    if(document.getElementById('rad1').checked){
+      document.getElementById('style').href='style1.css';
+    }
+    else if(document.getElementById('rad2').checked){
+      document.getElementById('style').href='style2.css';
+    }
+    else if(document.getElementById('rad3').checked){
+      document.getElementById('style').href='style3.css';
+    }
+</script> -->
+
+  
+
+</head>
+<body>
+
+  <div class="container">
+    <h3> 1 2 3</h3>
+    <div class="toggle">
+      <h1>calc</h1>
+      <h4>THEME</h4>
+
+
+     <!-- <label class="switch">
+        <input type="checkbox">
+     
+        <span class="slider round"></span>
+      </label>
+     -->
+     	
+      <div class="wrap">
+        <input type="radio" id="rad1" name="rads" checked onclick="change(1)">
+        <label for="rad1"></label>
+        <input type="radio" id="rad2" name="rads" onclick="change(2)">
+        <label for="rad2"></label>
+        <input type="radio" id="rad3" name="rads" onclick="change(3)">
+        <label for="rad3"></label>
+      </div>
+
+
+      <input type="radio" id="rad3" name="rads" onclick="change(3)">
+     
+  
+    
+
+
+
+    </div>
+    <div class="bar">
+      <!-- <input type="number" name="" id="result"> -->
+      <header id="input"></header>
+    </div>
+    <div class="numpad">
+      <button id="num" class="" value="7" onclick="num('7')"><p>7</p></button>
+      <button id="num" class="" value="8" onclick="num('8')"><p>8</p></button>
+      <button id="num" class="" value="9" onclick="num('9')"><p>9</p></button>
+      <button id="del" class="" value="" onclick="deletion()"><p>DEL</p></button>
+      <button id="num" class="" value="4" onclick="num('4')"><p>4</p></button>
+      <button id="num" class="" value="5" onclick="num('5')"><p>5</p></button>
+      <button id="num" class="" value="6" onclick="num('6')"><p>6</p></button>
+      <button id="num" class="" value="+" onclick="num('+')"><p>+</p></button>
+      <button id="num" class="" value="1" onclick="num('1')"><p>1</p></button>
+      <button id="num" class="" value="2" onclick="num('2')"><p>2</p></button>
+      <button id="num" class="" value="3" onclick="num('3')"><p>3</p></button>
+      <button id="num" class="" value="-" onclick="num('-')"><p>-</p></button>
+      <button id="num" class="" value="." onclick="num('.')"><p>.</p></button>
+      <button id="num" class="" value="0" onclick="num('0')"><p>0</p></button>
+      <button id="num" class="" value="/" onclick="num('/')"><p>/</p></button>
+      <button id="num" class="" value="*" onclick="num('*')"><p>x</p></button>
+      <button id="reset" class="" value="c" onclick="clr()"><p>RESET</p></button>
+      <button id="equal" class="" value="=" onclick="solve()"><p>=</p></button>
+    </div>
+  </div>
+
+  
+  <script>
+    //function that display value
+    function num(val)
+    {
+        document.getElementById("input").innerHTML += val
+    }
+      
+    //function that clear the display    // clear() is already taken
+    function clr()          
+    {
+        document.getElementById("input").innerHTML = ""
+    }
+
+    function deletion()
+    {
+      document.getElementById("input").innerHTML = document.getElementById("input").innerHTML.slice(0,-1)
+    }
+
+    //function that evaluates the digit and return result
+    function solve()
+    {
+        let x = document.getElementById("input").innerHTML
+        let y = eval(x)
+        document.getElementById("input").innerHTML = y
+    }
+
+
+    
+    function change(type)
+    {
+      if( type == 1 ){
+        document.getElementById('style').href='style1.css';
+      }
+      if( type == 2 ){
+        document.getElementById('style').href='style2.css';
+      }
+      if( type == 3 ){
+        document.getElementById('style').href='style3.css';
+      }
+    }
+
+
+
+   
+
+
+  </script>
+
+
+  
+
+	
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Andreas Robert Pitoy</a>.
+  </div>
+</body>
+</html>
