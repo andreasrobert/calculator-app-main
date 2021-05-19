@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9cfe5643-5ff8-41c3-afcc-2c132e46333e/deploy-status)](https://app.netlify.com/sites/hungry-poincare-0d28bd/deploys)
+
 # Frontend Mentor - Calculator app
 
 ![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)
